@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+            rel="stylesheet"
+    />
+    <script src="js/main.js"></script>
+    <script src="js/chat.js"></script>
+
+    <title>ChatBot</title>
+</head>
+<body>
+
+
+<!-- chat open -->
+<div class="chat-bar-open" id="chat-open">
+    <button
+            id="chat-open-button"
+            type="button"
+            class="collapsible close"
+            onclick="chatOpen()"
+    >
+        <img src="images/chatbot-icon.png" alt="Sparrow Bird image" />
+    </button>
+</div>
+
+<!-- chat close -->
+<div class="chat-bar-close" id="chat-close">
+    <button
+            id="chat-close-button"
+            type="button"
+            class="collapsible close"
+            onclick="chatClose()"
+    >
+        <i class="material-icons-outlined"> close </i>
+    </button>
+</div>
+
+
+<!-- chat chat-window -->
+<div class="chat-window" id="chat-window">
+    <div class="chat-window__inner">
+        
+    
+        <div class="message-box" id="messageBox">
+            <div class="hi-there">
+                <h1 class="hi-there__heading">Hi there! 👋</h1>
+                <p class="hi-there__text">How can I help?</p>
+            </div>
+        </div>
+    
+        <div class="input-box">
+            <div class="write-reply">
+                <input
+                        class="inputText"
+                        type="text"
+                        id="userChatInput"
+                        placeholder="Start typing..."
+                />
+            </div>
+            <div class="send-button">
+                <button
+                        type="submit"
+                        class="send-message"
+                        id="send"
+                        onclick="userResponse()"
+                >
+                    <i class="material-icons-outlined"> send </i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var accountToken = 'dummy-account-token';
+    var conversationHistory = '';
+</script>
+</body>
+</html>
